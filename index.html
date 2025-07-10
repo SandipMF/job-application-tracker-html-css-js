@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h1>Job Application Tracker System</h1>
+      </div>
+    </nav>
+    <!-- Summary -->
+    <div class="summary-row">
+      <div class="indevidual-status">Job Application: 0</div>
+      <div class="indevidual-status">Applied: 0</div>
+      <div class="indevidual-status">Interviewing: 0</div>
+      <div class="indevidual-status hired">Hired: 0</div>
+      <div class="rejected">Rejected: 0</div>
+    </div>
+
+    <!--  -->
+    <div class="form-with-table">
+      <!-- leftSection -->
+      <div class="form-section">
+        <h3>Application Form</h3>
+        <form class="application-form" id="createApplicationForm">
+          <div>
+            <label>Company:</label>
+            <input type="text" id="company" required />
+          </div>
+          <div>
+            <label>Role:</label>
+            <input type="text" id="role" required />
+          </div>
+          <div>
+            <label>Type:</label>
+            <select id="jobType" required>
+              <option>Onsite</option>
+              <option>Remote</option>
+              <option>Hybrid</option>
+            </select>
+          </div>
+          <div>
+            <label>Location:</label>
+            <input type="text" id="location" required />
+          </div>
+
+          <div>
+            <label>Date:</label>
+            <input type="date" id="date" />
+          </div>
+          <div>
+            <label>Status:</label>
+            <select id="status" required>
+              <option>Applied</option>
+              <option>Interviewing</option>
+              <option>Rejected</option>
+              <option>Hired</option>
+            </select>
+          </div>
+          <div>
+            <label>Note:</label>
+            <textarea
+              id="note"
+              rows="3"
+              placeholder="Write your notes..."
+            ></textarea>
+          </div>
+          <div class="div-footer-button-container">
+            <button class="submitBtn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- rightSection -->
+      <div class="application-list-section">
+        <h3>Job Application Table</h3>
+        <div>
+          <table class="application-list-table" id="applicationList">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>Company name</td>
+                <td>role</td>
+                <td>Selected JobType</td>
+                <td>Selected status</td>
+                <td>
+                  <button class="editBtn">Edit</button>
+                  <button class="deleteBtn">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Company name</td>
+                <td>role</td>
+                <td>Selected JobType</td>
+                <td>Selected status</td>
+                <td>
+                  <button class="editBtn">Edit</button>
+                  <button class="deleteBtn">Delete</button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- EditForm -->
+    <div class="edit-form">
+      <div class="edit-content">
+        <h3>Edit Job Application</h3>
+        <div class="form-section">
+          <form class="application-form" id="editApplicationForm">
+            <div>
+              <label>Company:</label>
+              <input type="text" id="edit_company" required />
+            </div>
+            <div>
+              <label>Role:</label>
+              <input type="text" id="edit_role" required />
+            </div>
+            <div>
+              <label>Type:</label>
+              <select id="edit_jobType" required>
+                <option>Onsite</option>
+                <option>Remote</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+            <div>
+              <label>Location:</label>
+              <input type="text" id="edit_location" required />
+            </div>
+
+            <div>
+              <label>Date:</label>
+              <input type="date" id="edit_date" />
+            </div>
+            <div>
+              <label>Status:</label>
+              <select id="edit_status" required>
+                <option>Applied</option>
+                <option>Interviewing</option>
+                <option>Rejected</option>
+                <option>Hired</option>
+              </select>
+            </div>
+            <div>
+              <label>Note:</label>
+              <textarea
+                id="edit_note"
+                rows="{3}"
+                placeholder="Write your notes..."
+              ></textarea>
+            </div>
+
+            <button type="submit">Update Application</button>
+            <button>Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

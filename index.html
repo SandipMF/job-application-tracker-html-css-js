@@ -43,14 +43,14 @@
               <option>Hybrid</option>
             </select>
           </div>
-          <div>
+          <div id="locationDiv">
             <label>Location:</label>
             <input type="text" id="location" required />
           </div>
 
           <div>
             <label>Date:</label>
-            <input type="date" id="date" />
+            <input type="date" id="date" required />
           </div>
           <div>
             <label>Status:</label>
@@ -79,7 +79,7 @@
       <div class="application-list-section">
         <h3>Job Application Table</h3>
         <div>
-          <table class="application-list-table" id="applicationList">
+          <table class="application-list-table" id="applicationListTable">
             <thead>
               <tr>
                 <th>Company</th>
@@ -90,26 +90,7 @@
               </tr>
             </thead>
             <tbody>
-              <!-- <tr>
-                <td>Company name</td>
-                <td>role</td>
-                <td>Selected JobType</td>
-                <td>Selected status</td>
-                <td>
-                  <button class="editBtn">Edit</button>
-                  <button class="deleteBtn">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Company name</td>
-                <td>role</td>
-                <td>Selected JobType</td>
-                <td>Selected status</td>
-                <td>
-                  <button class="editBtn">Edit</button>
-                  <button class="deleteBtn">Delete</button>
-                </td>
-              </tr> -->
+              <!-- Dynamic row -->
             </tbody>
           </table>
         </div>
@@ -117,7 +98,7 @@
     </div>
 
     <!-- EditForm -->
-    <div class="edit-form">
+    <div class="edit-form" id="editFormDiv">
       <div class="edit-content">
         <h3>Edit Job Application</h3>
         <div class="form-section">
@@ -138,7 +119,7 @@
                 <option>Hybrid</option>
               </select>
             </div>
-            <div>
+            <div id="edit_locationDiv">
               <label>Location:</label>
               <input type="text" id="edit_location" required />
             </div>
@@ -166,7 +147,7 @@
             </div>
 
             <button type="submit">Update Application</button>
-            <button>Cancel</button>
+            <button type="button" onclick="closeEditForm()">Cancel</button>
           </form>
         </div>
       </div>
